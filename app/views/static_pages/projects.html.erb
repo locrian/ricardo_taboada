@@ -1,0 +1,193 @@
+<% provide(:title, 'Projects') %>
+<div class="center hero-unit">
+  <h1>Here are the projects i have been working on</h1>
+  <h2> Updated as of <%= current_time %> </h2>
+</div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script src="/assets/bootstrap-tooltip.js "></script>
+  <script src="https://raw.github.com/twitter/bootstrap/master/js/bootstrap-popover.js "></script>
+  <script src="https://raw.github.com/twitter/bootstrap/master/js/bootstrap-tab.js "></script>
+  <script src="https://raw.github.com/twitter/bootstrap/master/js/bootstrap-transition.js "></script>
+
+
+
+<div class="container-fluid">
+    <div class="row-fluid">
+       <div class="span2">
+            <ul>
+                <li><a href=<%= root_path  %>><button class="btn btn-mini" id="nav_button" type="button"><i class="icon-home"></i> Home</button></a></li>
+                <li><a href=curriculum><button class="btn btn-mini" id="nav_button" type="button"><i class="icon-book"></i> Curriculum</button></a></li>
+                <li class="active"><a href=projects><button class="btn btn-mini btn-primary" id="nav_button" type="button"><i class="icon-pencil"></i> Projects</button></a></li>
+                <li><a href="#"><button class="btn btn-mini" id="nav_button" type="button"><i class="icon-envelope"></i> Contact</button></a></li>
+            </ul>
+
+	    <div class="tabbable tabs-left teste"> 
+    	      <ul class="nav nav-tabs myTab">
+                <li class="active"><a href="#tab1" data-toggle="tab">Digital Systems</a></li>
+                <li><a href="#tab2" data-toggle="tab">Databases</a></li>
+		<li><a href="#tab3" data-toggle="tab">Programming</a></li>
+	        <li><a href="#tab4" data-toggle="tab">Web Development</a></li>
+              </ul>
+            </div>	
+
+	
+       </div> 
+
+     	<div class="span10">
+     <p><br></p> 
+
+	<div class="tab-content">
+          <div class="tab-pane active fade in" id="tab1">
+	    <p class="curriculum_separator">Digital Systems</p>
+	    
+    <p class="curriculum_employers"><b>Binary Clock</b></p>
+	    <p class="curriculum_roles"><b>Objective:</b></p>
+	    <p class="curriculum_roles text_align_projects">The purpose of the project was to design a 24:00h binary clock with seconds, minutes and hours.
+             <br>It was required that it could alert precisely with a sound signal every 15m, 30m and 45m, all with dfferent sounds, 
+                and a continuous 2 second sound every 60m.
+          
+	    <p class="curriculum_roles"><b>Methodology:</b></p>
+            <p class="curriculum_roles text_align_projects">At the concept level, i have used Moore state machines and "D" Flip-Flops.
+	      <br>Among the tools used are, Xilinx ISE 10.1 IDE for the development and a Xilinx XA9572XL chip from the 9500XL family of CPLD's.
+	    </p> 
+         
+	  <p class="curriculum_roles"><b>Images:</b></p>
+	  
+
+            <ul class="thumbnails">
+              <li class="span3">
+                <a href="#" id="cpld1" rel="popover" class="thumbnail geral"><img src="/assets/cpld1.jpg" alt="cpld1"></a>
+              </li>	
+	      <li class="span3">
+                <a href="#" id="cpld2" rel="popover" class="thumbnail geral"><img src="/assets/cpld2.jpg" alt="cpld2"></a>
+              </li>
+              <li class="span3">
+                <a href="#" id="cpld3" rel="popover" class="thumbnail geral"><img src="/assets/cpld3.jpg" alt="cpld3"></a>
+              </li>
+
+ 	    </ul>
+
+       <p><br></p>
+	  <p class="curriculum_employers"><b>RGB Led Controller</b></p>
+	  <p class="curriculum_roles"><b>Objective:</b><p>
+          <p class="curriculum_roles text_align_projects">This project consisted in build an RGB led luminosity controller.<br>
+	    The control of the luminosity was handled by two buttons, one for increment and other for decrement. There was also programmed one
+	    button for reset the system, and two switches to handle 3 diferent features, like strob and luminosity patterns. I have included too a 7-Segment Display
+	     to give information about the selected colors</p> 
+         
+	  <p class="curriculum_roles"><b>Methodology</b></p>
+	  <p class="curriculum_roles text_align_projects">Once more i used the Xilinx platform to develop the project, with Xilinx ISE 10.1 IDE.<br>VHDL was
+	   the programming language of choice and the platform choosed was the Xilinx Spartan3 FPGA.</p>
+
+
+        <p class="curriculum_roles"><b>Images:</b></p>
+
+
+            <ul class="thumbnails">
+              <li class="span3">
+                <a href="#" id="fpga1" rel="popover" class="thumbnail fpga"><img src="/assets/fpga1.jpg" alt="fpga1"></a>
+              </li>
+              <li class="span3">
+                <a href="#" id="fpga2" rel="popover" class="thumbnail fpga"><img src="/assets/fpga2.jpg" alt="fpga2"></a>
+              </li>
+              <li class="span3">
+                <a href="#" id="fpga3" rel="popover" class="thumbnail fpga"><img src="/assets/fpga3.jpg" alt="fpga3"></a>
+              </li>
+            </ul>
+        <p><br></p>
+
+
+        </div>  
+        <div class="tab-pane fade in" id="tab2">
+	  <p class="curriculum_separator">Databases</p>
+
+	    <p class="curriculum_employers"><b>Digital Print Systems</b></p>
+            <p class="curriculum_roles"><b>Objective:</b></p>
+            <p class="curriculum_roles text_align_projects">Build a complete database system to handle sales activities in the digital printing business.</p>
+            <p class="curriculum_roles"><b>Methodology:</b></p>
+	    <p class="curriculum_roles text_align_projects">Concept related, UML diagrams like case studies diagrams, sequence diagrams and class diagrams were heavly               used.<br>For the modelation the program used was Visual Paradigm.<br>The DBMS used for the implementation was SQL Server 2008 R2.</p>
+
+	<p class="curriculum_roles"><b>Images:</b></p>
+
+
+            <ul class="thumbnails">
+              <li class="span3">
+                <a href="#" id="bd1" rel="popover" class="thumbnail bd"><img src="/assets/bd1.png" alt="bd1"></a>
+              </li>
+              <li class="span3">
+                <a href="#" id="bd2" rel="popover" class="thumbnail bd"><img src="/assets/bd2.jpg" alt="bd2"></a>
+              </li>
+              <li class="span3">
+                <a href="#" id="bd3" rel="popover" class="thumbnail bd"><img src="/assets/bd3.jpg" alt="bd3"></a>
+              </li>
+            </ul>
+        <p><br></p>
+
+
+
+	</div>
+	
+	
+	</div> <!-- tab-content-->
+        </div> <!-- span10 -->
+ 	
+      </div> <!-- row-fluid -->
+    </div>  <!-- container -->
+
+
+<script>  
+  $(function ()  
+  { $("#cpld1").popover({trigger: 'hover', placement: 'bottom', content: 'Displaying the time 07:39:29'} );  
+  });  
+</script>
+
+<script>  
+  $(function ()  
+  { $("#cpld2").popover({trigger: 'hover', placement: 'bottom', content: 'Displaying the time 10:47:43'} );  
+  });  
+</script>
+
+<script>  
+  $(function ()
+  { $("#cpld3").popover({trigger: 'hover', placement: 'bottom', content: 'Displaying the time 22:07:43'} );  
+  });  
+</script>
+
+<script>  
+  $(function ()  
+  { $("#fpga1").popover({trigger: 'hover', placement: 'bottom', content: 'Displaying the red led'} );  
+  });  
+</script>
+
+<script>  
+  $(function ()  
+  { $("#fpga2").popover({trigger: 'hover', placement: 'bottom', content: 'Displaying the green led'} );  
+  });  
+</script>
+
+<script>  
+  $(function ()
+  { $("#fpga3").popover({trigger: 'hover', placement: 'bottom', content: 'Displaying the blue led'} );  
+  });  
+</script>
+
+<script> 
+  var bd1 = '<img src="/assets/bd1.png" alt="bd1">'; 
+  $(function ()  
+  { $("#bd1").popover({trigger: 'hover', placement: 'bottom', content: bd1 } );  
+  });  
+</script>
+
+<script>  
+  $(function ()  
+  { $("#bd2").popover({trigger: 'hover', placement: 'bottom', content: 'Sequence diagram'} );  
+  });  
+</script>
+
+<script>  
+  $(function ()
+  { $("#bd3").popover({trigger: 'hover', placement: 'bottom', content: 'Use case diagram'} );  
+  });  
+</script>
+

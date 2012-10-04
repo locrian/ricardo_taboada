@@ -1,0 +1,282 @@
+@import "bootstrap";
+
+/*mixins , variables, etc */
+
+$grayMediumLight: #eaeaea;
+$customButtonBlue: rgb(0,180,255);
+$customTransparentBg: rgba(240,240,240,0.9); /*rgba accepts a transparent value*/
+
+
+@mixin box_sizing {               /* Sass minix permits a group of css rules to be used in other elements, for example in .debug_dump below (cap 7)*/
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/*General*/
+
+body{
+  background: url('fundo3.jpg') repeat-x;   /* Background image for the whole website */
+  background-attachment:fixed;
+}
+
+.teste{
+border-color:green;
+}
+
+
+.myTab{					    /* Tab definitions */
+margin-left:25px;
+  li {  
+        a{
+        &:hover{
+	color:black;
+	background-color:white;
+	       }
+        }
+  }
+  .active a,
+  .active a:hover{
+	  outline:0; 
+		 }
+}
+
+
+
+
+
+/* Home */
+
+.center {
+
+  text-align: left;
+  height: 100px;			/* size of the zone of the hero unit */
+  #signup_btn{
+  margin-top: 30px;
+  }
+
+  h1 {                                  /* Header 1 of the home Page */
+  text-align: left;
+  margin-top: -60px;
+  margin-bottom: 10px;
+  }
+  h2 {                                  /* Header 2 of the home Page */
+  text-align: left;
+  color: white;
+  }
+}
+
+.row {
+text-align: center;
+}
+
+
+
+.hero-unit {                            /* Main zone on the home page */
+  height:10;
+  padding: 80px;			
+  margin-bottom: 50px;
+  margin-top: 30px;
+  background-color: $customTransparentBg;
+  background-repeat: no-repeat;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;			/* The radius make round corners */
+}
+
+
+.container-fluid{			/* The container where the main subjects are placed */
+   background-color: white;	
+   -webkit-border-radius: 10px;
+   -moz-border-radius: 10px;
+    border-radius: 10px;
+    border: 2px solid $customTransparentBg;
+  
+   
+   #nav_button {			/* Navigation buttons on the fluid layout */
+    width: 120px;
+    height: 28px;
+    margin-top: 5px;
+   }
+ 
+   #home_text{
+     font-size: 1.7em;
+     letter-spacing: -1px;
+      }
+
+}
+
+
+.span6{
+width: 300px;
+text-align: center;
+ #button_lm{                            /* Button's "Learn more" of the home page"*/
+   margin-top: 10px;
+   &:hover{
+        color: white;
+        background: $customButtonBlue;
+   }
+ }
+}
+
+
+/* Curriculum & Projects*/
+
+#curriculum_name{			/* Font used to write the name on the CV */
+  font-size: 3.5em;
+  letter-spacing: -1px;
+}
+
+.curriculum_separator{				
+   font-size: 2.5em;
+   border-bottom:1px solid blue;   	/* Underline below the curriculum separator words */
+}
+
+.ordinary_text{
+   font-size: 1.5em;
+}
+
+
+.small_text{
+   font-size: 1.0em;
+}
+
+.curriculum_employers{
+   font-size: 2.0em;
+}
+
+.curriculum_roles{
+   font-size: 1.8em;
+}
+
+.text_align_projects{
+   margin-left:20px;
+}
+
+/* typografy */
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+
+h1 {
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.7em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: $grayLight;                            /* defenido no LESS no bootstrap */
+}
+
+h3 {
+  font-size: 2em;
+  letter-spacing: -1px;
+  margin-bottom: 40px;
+  color: $grayLight;
+}
+
+h4 {
+  font-size: 2em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+}
+
+/* header */
+
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: white; /* built in color */
+  /* text-transform: uppercase; */
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+  line-height: 1;
+  &:hover {
+    color: white; /* built in color */
+    text-decoration: none;
+  }
+}
+
+/*  footer */
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid $grayMediumLight;
+  color: $grayLight;
+  a {
+   color: $gray; /* built in color gray */
+   &:hover {
+    color: $grayDarker; /* grayDarker */
+   }
+ }
+
+  small {
+   float: left;
+}
+
+  ul {
+  float: right;
+  list-style: none;
+  li {
+    float: left ;
+    margin-left: 10px;
+   }
+ }
+}
+
+
+
+/*Miscellaneous */
+
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include box_sizing;
+ }
+
+/* Photos */
+
+.thumbnail{
+	  .geral{
+  	   width:172px;
+           height:104px;
+		}
+          .fpga{
+               width:172px;
+               height:280px;
+               }  
+}
+
+
+/* JavaScript Elements */
+
+.popover{              			/* Popover Styling */
+        .arrow{
+	              
+              }
+        .popover-inner{
+		      .popover-title{
+		      margin:0px;
+				    }
+	              }
+	.popover-content{
+	text-align:center;
+			}
+}

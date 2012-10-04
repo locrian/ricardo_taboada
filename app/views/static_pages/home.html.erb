@@ -1,15 +1,29 @@
 <% provide(:title, '') %>
 <div class="center hero-unit">
-  <h1>Welcome to LEI @ ISPGaya</h1>
+  <h1>Welcome to my personal Home Page</h1>
     <h2>
-      This is the comunity  
-      <a href="http://www.ispgaya.pt/">ISPGaya website</a>
-      created by students, to students.
+      This is the home page of Ricardo Taboada
       </h2>
-  <%= link_to "Sign up now!", signup_path, class: "btn btn-large btn-primary", id: "signup_btn" %>
-</div>
+ </div>
 
-  <div class="row features">
+    <div class="container-fluid">
+      <div class="row-fluid">
+       <div class="span2">
+            <ul>
+                <li class="active"><a href=<% root_path %>><button class="btn btn-mini btn-primary" id="nav_button" type="button"><i class="icon-home icon-white"></i> Home</button></a></li>
+    		<li><a href=curriculum><button class="btn btn-mini" id="nav_button" type="button"><i class="icon-book"></i> Curriculum</button></a></li>
+    		<li><a href=projects><button class="btn btn-mini" id="nav_button" type="button"><i class="icon-pencil"></i> Projects</button></a></li>
+    		<li><a href="#"><button class="btn btn-mini" id="nav_button" type="button"><i class="icon-envelope"></i> Contact</button></a></li>
+    	    </ul>
+       </div>
+       <div class="span10">
+         <p id="home_text">Nesta secção é suposto haver um tipo de blog, heheh !</p>
+      </div>
+     </div>
+   </div>
+   
+ 
+ <div class="row features">
    <h3>Technology used to put this project up.</h3>
     <div class="span6">
       <%= link_to image_tag("ruby.png", alt: "Ruby"), 'http://ruby-lang.org/' %>
@@ -36,7 +50,7 @@
 
   
 
-<%= link_to image_tag("ispgaya_small.png",id: "logo_ispg", alt: "ISPGaya"), 'http://www.ispgaya.pt/' %>
+
 
 
 

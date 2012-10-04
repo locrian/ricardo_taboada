@@ -1,0 +1,340 @@
+<% provide(:title, 'Curriculum') %>
+<div class="center hero-unit">
+  <h1>This is my curriculum Vitae</h1>
+  <h2> Updated as of <%= current_time %> </h2>
+</div>
+
+  <script src="https://raw.github.com/twitter/bootstrap/master/js/bootstrap-tab.js "></script>
+  <script src="https://raw.github.com/twitter/bootstrap/master/js/bootstrap-transition.js "></script>
+
+
+  <div class="container-fluid">
+      <div class="row-fluid">
+       <div class="span2">
+            <ul>
+                <li><a href=<%= root_path  %>><button class="btn btn-mini" id="nav_button" type="button"><i class="icon-home"></i> Home</button></a></li>
+                <li class="active"><a href=curriculum><button class="btn btn-mini btn-primary" id="nav_button" type="button"><i class="icon-book icon-white"></i> Curriculum</button></a></li>
+                <li><a href=projects><button class="btn btn-mini" id="nav_button" type="button"><i class="icon-pencil"></i> Projects</button></a></li>
+                <li><a href="#"><button class="btn btn-mini" id="nav_button" type="button"><i class="icon-envelope"></i> Contact</button></a></li>
+             </ul>
+
+	    <div class="tabbable tabs-left myTab" >
+              <ul class="nav nav-tabs">
+                <li class="active"><a href="#tab1" data-toggle="tab">Info & Contacts</a></li>
+                <li><a href="#tab2" data-toggle="tab">Objectives & Interests</a></li>
+                <li><a href="#tab3" data-toggle="tab">Work experience</a></li>
+                <li><a href="#tab4" data-toggle="tab">Education & training</a></li>
+	        <li><a href="#tab5" data-toggle="tab">Personal skills</a></li>
+	      </ul>
+            </div>
+       </div>     
+
+
+     <div class="span10">
+
+       <div class="tab-content">
+        
+           <p id="curriculum_name">Ricardo Filipe Fernandes Taboada</p>
+           
+          <div class="tab-pane active fade in" id="tab1">
+	     <p class="curriculum_separator">Info & Contacts</p>
+             <p class="ordinary_text">Nationality: Portuguese<br>Telephone: +351 .........<br>E-mail: ricardofilipetaboada@gmail.com
+               <br>Birth date: 14 April of 1981<br>Gender: Male
+             </p>
+
+
+        <p><br></p>
+           </div>
+	  
+	   <div class="tab-pane fade in " id="tab2">
+             <p class="curriculum_separator">Objectives & Interests</p>
+             <p class="ordinary_text">Work in information techonology and become more and more proficient at it</p>
+          </div>
+
+      
+
+          <div class="tab-pane fade in" id="tab3">
+            <p class="curriculum_separator">Work experience</p>         
+	      <table>
+              <col width="370">
+              <col width="370">
+              <tr>
+                <td><p class="curriculum_employers">CNX, Lda, Porto</p></td> 
+                <td align="right"><p class="curriculum_employers">January 2008 - Present</p></td>
+              </tr>
+              </table>
+	      <p class="curriculum_roles">Systems Analyst</P>
+ 	        <P class="ordinary_text">- Install Xerox and Konica Minolta networked printing solutions<br>- Install Xerox and Konica Minolta production softwares
+	  	 <br>- Customer operation training on printing and software solutions<br>- Newtwork and printing/software troubleshooting</p>
+             
+       <p><br></p>	
+		 
+             <table>
+             <col width="370">
+             <col width="370">
+             <tr>
+               <td><p class="curriculum_employers">Nacional Cópia, Lda, Maia</p></td> 
+               <td align="right"><p class="curriculum_employers">April 2006 - December 2007</p></td>
+             </tr>
+             </table>
+             <p class="curriculum_roles">Systems Analyst</P>
+               <P class="ordinary_text">- Install Xerox networked printing solutions<br>- Install Xerox production softwares
+                <br>- Customer operation training on printing and software solutions<br>- Newtwork and printing/software troubleshooting</p>
+
+	   <p><br></p>  
+                 
+             <table>
+             <col width="370">
+             <col width="370">
+             <tr>
+               <td><p class="curriculum_employers">Xerox Portugal, Porto/Lisbon</p></td> 
+               <td align="right"><p class="curriculum_employers">June 2004 - April 2006</p></td>
+             </tr>
+             </table>
+             <p class="curriculum_roles">Systems Analyst</P>
+               <P class="ordinary_text">- Install Xerox networked printing solutions<br>- Install Xerox production softwares
+                <br>- Customer operation training on printing and software solutions<br>- Newtwork and printing/software troubleshooting</p>
+         
+           <p><br></p>
+
+             <table>
+             <col width="370">
+             <col width="370">
+             <tr>
+               <td><p class="curriculum_employers">Xerox Portugal, Porto</p></td>  
+               <td align="right"><p class="ordinary_text">September 2001 - Semptember 2003</p></td>
+             </tr>
+             </table>
+             <p class="curriculum_roles">Site Manager</P>
+               <P class="ordinary_text">- Management of all printers and copiers on customer sites<br>- Manage consumables stocks
+                <br>- Tecnichal assistance and network problems diagnostics</p>
+
+         <p><br></p>
+
+             <table>
+             <col width="370">
+             <col width="370">
+             <tr>
+               <td><p class="curriculum_employers">Correia & Ramos Inforshopping</p></td>       
+               <td align="right"><p class="curriculum_employers">April 2000 - October 2000</p></td>
+             </tr>
+             </table>
+             <p class="curriculum_roles">Computer Technician</P>
+               <P class="ordinary_text">- Assemble computer systems<br>- install Operating systems and applications
+                <br>- Helpdesk<br>- Technical assistance</p>
+
+
+	<p><br></p>
+
+	  </div>
+
+	  <div class="tab-pane fade in" id="tab4">
+	    <p class="curriculum_separator">Education & Training</p>
+	      <table>
+                <col width="370">
+                <col width="370">
+                <tr>
+                  <td><p class="curriculum_roles">Institulo Superior Politécnico Gaya</p></td>
+                  <td align="right"><p class="curriculum_employers">2010 - Present</p></td>
+                </tr>
+                <tr>
+                  <td><p class="curriculum_roles">Title of qualification</p></td>
+	          <td><p class="curriculum_roles">Bachelor in Computer Science Engineering</p></td>
+                </tr>
+          
+	         <tr>
+		    <td><br></td>
+	         </tr>
+	         <tr>
+                    <td><p class="ordinary_text">Main Subjects / skills covered</p></td>
+                    <td><p class="ordinary_text">General</p></td>
+	         </tr>
+                 <tr>
+ 	          <td><p class="ordinary_text"></p></td>
+	          <td><p class="ordinary_text">Mathematics Analysis, Linear Algebra, Operational Research, Numeric Analysis, Probabilities and
+		   Statistics, Physics</p></td>
+	        </tr> 
+                <tr>
+                    <td><p class="ordinary_text"></p></td>
+                    <td><p class="ordinary_text"></p></td>
+                </tr>
+                <tr>
+                  <td><p class="ordinary_text"></p></td>
+                  <td><p class="ordinary_text">Technical</p></td>
+                </tr>
+	        <tr>
+	  	  <td><p class="ordinary_text"></p></td>
+	          <td><p class="ordinary_text">FPGA and CPLD Programming using VHDL, Object Oriented Programming, Java SE, Java Me, Cisco IOS and Networks, SQL, UML,
+                    Microsoft SQL Server, Oracle 10g and PL/SQL.</p></td>
+	        </tr>
+                <tr>
+                  <td><p class="ordinary_text">National or international classification</p></td>
+                  <td><p class="ordinary_text">ISCED 5</p></td>
+                </tr>
+              </table>
+	
+	  <p><br></p>
+        
+          <p><br></p>
+
+	<table>
+         <col width="370">
+         <col width="370">
+	  <tr>
+	    <td><p class="curriculum_roles">Escola secundária António Sérgio</p></td>
+	    <td align="right"><p class="curriculum_roles">2001 - 2004</p></td>
+	  </tr>
+	  <tr>
+	    <td><p class="curriculum_roles">Title of qualification</p></td>
+            <td><p class="curriculum_roles">Computer Technician</p></td>
+          </tr>
+          <tr>
+            <td><p class="ordinary_text">Main Subjects / skills covered</p></td>
+            <td><p class="ordinary_text">Programming and Multimédia</p></td>
+          </tr>
+	  <tr>
+            <td><p class="ordinary_text">National or international classification</p></td>
+            <td><p class="ordinary_text">ISCED 3</p></td>
+          </tr>
+  	</table>
+ 
+	  <p><br></p>
+          <p><br></p>
+
+        <table>
+         <col width="370">
+         <col width="370">
+          <tr>
+            <td><p class="curriculum_roles">Instituto de informática do Porto</p></td>
+            <td align="right"><p class="curriculum_roles">2003</p></td>
+          </tr>
+          <tr>
+            <td><p class="curriculum_roles">Title of qualification</p></td>
+            <td><p class="curriculum_roles">Multimedia Technician</p></td>
+          </tr>
+          <tr>
+            <td><p class="ordinary_text">Main Subjects / skills covered</p></td>
+            <td><p class="ordinary_text">Macromedia Director, Macromedia DreamWeaver, Macromedia Freehad, Adobe Photoshop, Adobe Premiere</p></td>
+          </tr>
+          <tr>
+            <td><p class="ordinary_text">National or international classification</p></td>
+            <td><p class="ordinary_text">ISCED 4</p></td>
+          </tr>
+        </table>
+
+   <p><br></p>
+      </div>
+ 
+      <div class="tab-pane fade in" id="tab5">
+          <p class="curriculum_separator">Personal skills and competences</p>
+            <table>
+            <col width="200">
+	    <col width="570">         
+	      <tr>
+                <td><p class="ordinary_text">Other language(s)</p></td>
+ 	        <td></td>
+              </tr>
+            </table>
+	   
+        <table>
+	<col width="200">
+	<col width="570">
+	  <tr>
+	    <td><p class="ordinary_text">Self assessment</P></td>
+	    <td><table border="1">
+		<col width="220">
+		<col width="220">
+		<col width="130">
+		  <tr>
+		    <td align="center"><p class="ordinary_text">Understanding</p></td>
+	    	    <td align="center"><p class="ordinary_text">Speaking</p></td>
+           	    <td align="center"><p class="ordinary_text">Writing</p></td>
+	          </tr>
+                </table>
+             </td>
+	  </tr>
+          <tr>
+	    <td><p class="ordinary_text">European level</p></td>
+	    <td><table border="1">
+	      <col width="110">
+	      <col width="110">
+	      <col width="110">
+	      <col width="105">
+	      <col width="130">
+		<tr>
+		  <td align="center"><p class="small_text">Listening</p></td>
+		  <td align="center"><p class="small_text">Reading</p></td>
+		  <td align="center"><p class="small_text">Interaction</p></td>
+		  <td align="center"><p class="small_text">Production</p></td>
+		  <td align="center"><p></p></td>
+		</tr>
+	      </table>
+	    </td>
+	  </tr>
+	  <tr>
+	    <td><p class="ordinary_text">English</p></td>
+	    <td><table border="1">
+	      <col width="20">
+	      <col width="90">
+	      <col width="20">
+	      <col width="96">
+	      <col width="20">
+              <col width="90">
+	      <col width="20">
+	      <col width=90">
+	      <col width="20">
+	      <col width="110">
+		<tr>
+		  <td><p class="small_text" align="center">B1</p></td>
+		  <td><p class="small_text" align="center">Independent</p></td>
+		  <td><p class="small_text" align="center">C2</p></td>
+ 		  <td><p class="small_text" align="center">Proficient</p></td>
+		  <td><p class="small_text" align="center">B2</p></td>
+		  <td><p class="small_text" align="center">Independent</p></td>
+		  <td><p class="small_text" align="center">B2</p></td>
+                  <td><p class="small_text" align="center">Independent</p></td>
+		  <td><p class="small_text" align="center">B2</p></td>
+		  <td><p class="small_text" align="center">Independent</p></td>
+		</tr>
+	      </table>
+	    </td>
+	   </tr>
+	</table>
+
+     <p><br></p>
+
+	<table>
+	  <col width="370">
+	  <col width="370">
+	    <tr>
+	      <td><p class="ordinary_text">Social skills and competences</p></td>
+	      <td><p class="ordinary_text">Genuine, good communication, teamwork</p></td>
+	    </tr>
+	    <tr>
+	      <td><p class="ordinary_text">Technical skills and competences</p></td>
+              <td><p class="ordinary_text">Good problem troubleshooting. Proactive</p></td>
+            </tr>
+            <tr>
+	      <td><p class="ordinary_text">Computer skills and competences</p></td>
+              <td><p class="ordinary_text">A+ Comptia Certification</p></td>
+            </tr>
+            <tr>
+              <td><p class="ordinary_text"></p></td>
+              <td><p class="ordinary_text">Advanced Microsoft Windows 98/2000/XP/Vista/7 user. <p class="ordinary_text">Medium Knowledge of Unix/Linux Systems.</p>
+	        <p class="ordinary_text">Medium Knowledge of MacOSX Systems</p><p class="ordinary_text">Basic Knowledge of Graphics Design Applications as Photoshop, 			FreeHand, CorelDraw, Indesign and Illustrator</p><p class="ordinary_text">Medium Knowledge of Office Applications like Microsoft Word Powerpoint 
+		 and Excel</p></p></td>
+            </tr>
+            <tr>
+	      <td><p class="ordinary_text">Artistic skills and competences</p></td>
+	      <td><p class="ordinary_text">Guitar playing</p></td>
+	    </tr>
+	</table>
+
+     <p><br><p>
+
+	</div> <!-- tab pane-->
+       </div> <!-- tab content-->       
+      </div>
+     </div>
+   </div>
+
