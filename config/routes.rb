@@ -3,7 +3,7 @@ RicardoTaboada::Application.routes.draw do
   root to: 'static_pages#home'                   
 
   match '/about',   to: 'static_pages#about'
-  match '/contact', to: 'static_pages#contact'
+  match '/contacts', to: 'static_pages#contacts'
   match '/curriculum', to: 'static_pages#curriculum'  
   match '/projects', to: 'static_pages#projects'
 

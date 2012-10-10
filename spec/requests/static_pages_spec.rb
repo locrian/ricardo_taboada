@@ -37,4 +37,13 @@ describe "StaticPages" do
     it {should have_selector('title', text: '| Projects') }
   end
 
+  describe "Contacts Page" do
+    before {visit contacts_path }
+    let(:heading) {'Here are my contacts' }
+    let(:page_title) {'Contacts'}
+
+    it_should_behave_like "all static pages"
+    it {should have_selector('title', text: '| Contacts') }
+  end
+
 end

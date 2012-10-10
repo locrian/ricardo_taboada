@@ -19,15 +19,16 @@
                 <li><a href=<%= root_path  %>><button class="btn btn-mini" id="nav_button" type="button"><i class="icon-home"></i> Home</button></a></li>
                 <li><a href=curriculum><button class="btn btn-mini" id="nav_button" type="button"><i class="icon-book"></i> Curriculum</button></a></li>
                 <li class="active"><a href=projects><button class="btn btn-mini btn-primary" id="nav_button" type="button"><i class="icon-pencil"></i> Projects</button></a></li>
-                <li><a href="#"><button class="btn btn-mini" id="nav_button" type="button"><i class="icon-envelope"></i> Contact</button></a></li>
+                <li><a href=contacts><button class="btn btn-mini" id="nav_button" type="button"><i class="icon-envelope"></i> Contacts</button></a></li>
             </ul>
 
 	    <div class="tabbable tabs-left teste"> 
     	      <ul class="nav nav-tabs myTab">
                 <li class="active"><a href="#tab1" data-toggle="tab">Digital Systems</a></li>
                 <li><a href="#tab2" data-toggle="tab">Databases</a></li>
-		<li><a href="#tab3" data-toggle="tab">Programming</a></li>
-	        <li><a href="#tab4" data-toggle="tab">Web Development</a></li>
+		<li><a href="#tab3" data-toggle="tab">Networks</a></li>
+                <li><a href="#tab4" data-toggle="tab">Programming</a></li>
+	        <li><a href="#tab5" data-toggle="tab">Web Development</a></li>
               </ul>
             </div>	
 
@@ -124,16 +125,44 @@
             </ul>
         <p><br></p>
 
-
-
 	</div>
 	
+
+        <div class="tab-pane fade in" id="tab3">
+          <p class="curriculum_separator">Databases</p>
+
+            <p class="curriculum_employers"><b></b></p>
+            <p class="curriculum_roles"><b>Objective:</b></p>
+            <p class="curriculum_roles text_align_projects">Build a complete database system to handle sales activities in the digital printing business.</p>
+            <p class="curriculum_roles"><b>Methodology:</b></p>
+            <p class="curriculum_roles text_align_projects">Concept related, UML diagrams like case studies diagrams, sequence diagrams and class diagrams were heavly               used.<br>For the modelation the program used was Visual Paradigm.<br>The DBMS used for the implementation was SQL Server 2008 R2.</p>
+
+        <p class="curriculum_roles"><b>Images:</b></p>
+
+
+            <ul class="thumbnails">
+              <li class="span3">
+                <a href="#" id="bd1" rel="popover" class="thumbnail bd"><img src="/assets/bd1.png" alt="bd1"></a>
+              </li>
+              <li class="span3">
+                <a href="#" id="bd2" rel="popover" class="thumbnail bd"><img src="/assets/bd2.jpg" alt="bd2"></a>
+              </li>
+              <li class="span3">
+                <a href="#" id="bd3" rel="popover" class="thumbnail bd"><img src="/assets/bd3.jpg" alt="bd3"></a>
+              </li>
+            </ul>
+        <p><br></p>
+
+        </div>
+
 	
 	</div> <!-- tab-content-->
         </div> <!-- span10 -->
  	
       </div> <!-- row-fluid -->
-    </div>  <!-- container -->
+    </div>  <!-- container fluid-->
+
+
 
 
 <script>  
@@ -175,7 +204,7 @@
 <script> 
   var bd1 = '<img src="/assets/bd1.png" alt="bd1">'; 
   $(function ()  
-  { $("#bd1").popover({trigger: 'hover', placement: 'bottom', content: bd1 } );  
+  { $("#bd1").popover({trigger: 'hover', placement: 'bottom', content: 'Class Diagram' } );  
   });  
 </script>
 
@@ -190,4 +219,5 @@
   { $("#bd3").popover({trigger: 'hover', placement: 'bottom', content: 'Use case diagram'} );  
   });  
 </script>
+
 
