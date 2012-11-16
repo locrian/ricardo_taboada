@@ -21,6 +21,7 @@ width:1200px;     			    /* Specifies the overall width of the page
 }
 */
 
+
 body{
 
   /*background: url('fundo3.jpg') repeat-x;   /* Background image for the whole website */
@@ -202,18 +203,19 @@ p {
 
 /* header */
 
-#logo {
+#logo {				/* customization of the "Ricardo Taboada" logo on the navbar */
   float: left;
   margin-right: 10px;
-  font-size: 1.7em;
-  color: white; /* built in color */
-  /* text-transform: uppercase; */
+  font-family: "Arial", Helvetica, sans-serif; 
+  font-size: 2.5em;
+  color: #505050 ; /* normal color */
+  /*text-transform: uppercase;*/
   letter-spacing: -1px;
-  padding-top: 9px;
-  font-weight: bold;
+  padding-top: 2px;            /* space between the top of the letters and the top of the navbar"
+  /*font-style: italic;*/
   line-height: 1;
   &:hover {
-    color: white; /* built in color */
+   /* color: #303030  ;*/ 		/* color when highlighted */
     text-decoration: none;
   }
 }
