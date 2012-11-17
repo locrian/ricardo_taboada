@@ -4,8 +4,11 @@
         <%= link_to "ricardo taboada", root_path , id: "logo" %>
         <nav>
           <ul class="nav pull-right">
-            <li><%= link_to "Home",     root_path %></li>
-            <li><%= link_to "About",    about_path %></li>
+		<%# is_active? is a helper method defined in static pages helper and tests for the current active page%>
+            <li class="<%= is_active?("home")%>"><%= link_to "Home", root_path, :class => is_active?("Home") %></li>
+            <li class="<%= is_active?("curriculum")%>"><%= link_to "Curriculum", curriculum_path %></li>
+	    <li class="<%= is_active?("projects")%>"><%= link_to "Projects", projects_path %></li>
+	    <li id="navbar_separator"></li>
             <li><%= link_to "Sign in",  '#' %></li>
           </ul>
         </nav>

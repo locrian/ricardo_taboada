@@ -1,8 +1,13 @@
 class StaticPagesController < ApplicationController
-  def home
+  def home 	
+     out = 'home'    
   end
 
   def curriculum
+     out = 'curriculum'
+  end
+
+  def projects
   end
 
   def about
@@ -10,4 +15,5 @@ class StaticPagesController < ApplicationController
 
   def contact
   end
+
 end

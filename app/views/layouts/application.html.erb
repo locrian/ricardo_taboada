@@ -9,7 +9,17 @@
 </head>
 <body>
 <%= render 'layouts/header' %>
- <!-- <%= yield %>-->                                           <!--Page body's go here with "yield", comented this in container so it can have full width-->
+<%# If this is the home page then the hero unit is out of the container so it can have full width %> 
+<% if is_active?("home") == 'active' %>
+     <div class="hero-unit" id ="hu-home">
+         <div class="container">
+          <%#   <h1>Welcome to my personal Home Page</h1>%>
+          <%#   <h2>This is the home page of Ricardo Taboada</h2>%>
+          <%= render 'layouts/hero-home' %>
+         </div>
+     </div>
+ <% end %>
+  <!--<%= yield %>-->                                          <!--Page body's go here with "yield", comented this in container so it can have full width-->
   <div class="container">
     <%= yield %>                                                <!-- Page body's go here with "yield"-->
     <%= render 'layouts/footer' %>
