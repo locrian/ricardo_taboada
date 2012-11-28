@@ -35,8 +35,8 @@ width:1200px;     			    /* Specifies the overall width of the page
 
 body{
   margin-left:0px;
-  /*background: url('background.png') repeat-x;*/   /* Background image for the whole website */
-  /*background-attachment:fixed;*/
+  background: url('fundo3.jpg') repeat-x;   /* Background image for the whole website */
+  background-attachment:fixed;		    /* Fixs the backgroud */
   /*background-color: $grayMediumLight;
 }
 
@@ -95,7 +95,7 @@ text-align: center;
   text-align: top;
   padding: 110px;                        
   margin-bottom: 50px;
-  margin-top: 70px;
+  margin-top: 45px;
   margin-left:-25px;
   background-repeat: no-repeat;
   background-image: url(hu1.png);
@@ -106,17 +106,29 @@ text-align: center;
 
 }
 
+#hu-curriculum{
+  background-color: white;
+  background-image: url(CV.png);
+  background-position: right;
+    #cv-h1{
+      text-align: bottom;
+    }
+
+}
 
 .hero-unit {                            /* Common Hero Units */
   /*height:10;*/
   padding: 80px;			
   margin-bottom: 50px;
-  margin-top: 30px;
+  margin-top: 25px;
   background-color: $customTransparentBg;
   background-repeat: no-repeat;
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px;
   border-radius: 0px;			/* The radius make round corners */
+  -moz-box-shadow: 0px 0px 5px #888;    /* Add shadowing to hero unit */
+  -webkit-box-shadow: 0px 0px 5px #888;
+  box-shadow: 0px 0px 5px #888;	
 }
 
 
@@ -127,7 +139,9 @@ text-align: center;
    -moz-border-radius: 10px;
     border-radius: 10px;
     border: 2px solid $customTransparentBg;
-  
+    -moz-box-shadow: 0px 0px 5px #888; /* Add shadowing to container fluid */
+    -webkit-box-shadow: 0px 0px 5px #888;
+    box-shadow: 0px 0px 5px #888;  
    
    #nav_button {			/* Navigation buttons on the fluid layout */
     width: 120px;
