@@ -40,6 +40,7 @@ width:1200px;     			    /* Specifies the overall width of the page
 }
 
 body{
+  height: 100%;
   margin-left:0px;
   background: url('fundo3.jpg') repeat-x;   /* Background image for the whole website */
   background-attachment:fixed;		    /* Fixs the backgroud */
@@ -271,8 +272,8 @@ margin-bottom: 0px;
 text-align: center;
 }
 
-footer {
-  margin-top: 50px;
+footer { 
+  margin-top: 150px;
   margin-bottom: 0px; 
    a {
    color: $gray; /* built in color gray */
