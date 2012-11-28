@@ -13,6 +13,12 @@ $customTransparentBg: rgba(240,240,240,0.9); /*rgba accepts a transparent value*
   box-sizing: border-box;
 }
 
+@mixin box_shadow {
+  -moz-box-shadow: 0px 0px 5px #888;    /* Add shadowing to hero unit */
+  -webkit-box-shadow: 0px 0px 5px #888;
+  box-shadow: 0px 0px 5px #888;
+}
+
 /*General*/
 
 /*
@@ -107,13 +113,12 @@ text-align: center;
 }
 
 #hu-curriculum{
-  background-color: white;
   background-image: url(CV.png);
   background-position: right;
-    #cv-h1{
-      text-align: bottom;
-    }
-
+  background-color: white; 
+  #cv-h2{
+  color: gray;  
+  } 
 }
 
 .hero-unit {                            /* Common Hero Units */
@@ -122,13 +127,12 @@ text-align: center;
   margin-bottom: 50px;
   margin-top: 25px;
   background-color: $customTransparentBg;
-  background-repeat: no-repeat;
+  
+background-repeat: no-repeat;
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px;
   border-radius: 0px;			/* The radius make round corners */
-  -moz-box-shadow: 0px 0px 5px #888;    /* Add shadowing to hero unit */
-  -webkit-box-shadow: 0px 0px 5px #888;
-  box-shadow: 0px 0px 5px #888;	
+  @include box_shadow;	
 }
 
 
@@ -139,9 +143,7 @@ text-align: center;
    -moz-border-radius: 10px;
     border-radius: 10px;
     border: 2px solid $customTransparentBg;
-    -moz-box-shadow: 0px 0px 5px #888; /* Add shadowing to container fluid */
-    -webkit-box-shadow: 0px 0px 5px #888;
-    box-shadow: 0px 0px 5px #888;  
+    @include box_shadow;  
    
    #nav_button {			/* Navigation buttons on the fluid layout */
     width: 120px;
@@ -262,30 +264,26 @@ p {
 
 /*  footer */
 
+#nav-footer {
+margin-left: -25px;
+margin-bottom: 0px;
+
+text-align: center;
+}
+
 footer {
-  margin-top: 45px;
-  padding-top: 5px;
-  border-top: 1px solid $grayMediumLight;
-  color: $grayLight;
-  a {
+  margin-top: 50px;
+  margin-bottom: 0px; 
+   a {
    color: $gray; /* built in color gray */
    &:hover {
     color: $grayDarker; /* grayDarker */
    }
  }
-
-  small {
-   float: left;
-}
-
-  ul {
-  float: right;
-  list-style: none;
-  li {
-    float: left ;
-    margin-left: 10px;
-   }
- }
+  .table-footer {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 
