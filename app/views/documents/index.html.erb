@@ -1,0 +1,43 @@
+<% provide(:title, 'Documents') %>
+
+  <h1>Documents</h1>
+
+
+<% if current_user.email == "ricardo.taboada@hotmail.com" %>
+  <%= form_for @document, :html => { :multipart => true } do |f| %>
+       <%# Parcial de gerar erros localizado em app/views/shared/_error_messages_document.html.erb %>
+    <%= render 'shared/error_messages_document' %>
+
+    <%= f.label :doc_type %>
+    <%= f.text_field :doc_type %>
+
+    <%= f.file_field :file %>    
+
+    <%= f.submit "Submit", class: "btn btn-large btn-primary"%>
+  <%end%>
+<%end%>
+
+  <div class="container-fluid">
+      <div class="row-fluid">
+        <ul class="agendas">
+	  <% @docs.all.each do |d| %>
+            <li>
+              <p>
+              <table style="width: 940px">
+                <tr>
+                  <td style="width: 470px; text-align: left">
+                    <i class="icon-file"></i> <%= link_to d.doc_type, d.file.url(:original, false) %> Inserted at: <%= d.updated_at.strftime("%H:%Mh of %d-%m-%Y")%>
+                  </td>
+                  <td style="text-align: right">
+                    <%if current_user.email =="ricardo.taboada@hotmail.com" %>
+                      <i class="icon-trash"></i> <%= link_to "Remove", d, method: :delete, data: {confirm: "Are you sure you want to remove the file #{d.doc_type} ?" } %>
+		    <%end%>
+                  </td>
+                </tr>
+              </table> 
+              </p>
+            </li>
+          <%end%>
+        </ul>
+      </div>
+    </div>

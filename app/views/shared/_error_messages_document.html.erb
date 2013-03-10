@@ -1,0 +1,15 @@
+<%# Parcial que trata das mensagens de erro ao lidar com a tabela Document da base de dados %>
+
+<% if @document.errors.any? %>
+  <div id="error_explanation">
+    <div class="alert alert-error">
+      The form contains <%= pluralize(@document.errors.count, "error") %>.
+    </div>
+    <ul>
+    <% @document.errors.full_messages.each do |msg| %>
+      <li>* <%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+

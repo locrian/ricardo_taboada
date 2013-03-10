@@ -31,9 +31,9 @@
           <%@agendas.all.each do |a| %>
             <li>
               <p><span class="word_agenda_gray">From: </span>
-              <span class="word_agenda_black"><%= a.start_date %> </span> 
+              <span class="word_agenda_black"><%= a.start_date.strftime("%d-%m-%Y") %> </span> 
               <span class="word_agenda_gray">to: </span>
-              <span class="word_agenda_black"> <%= a.end_date %></span></p>
+              <span class="word_agenda_black"> <%= a.end_date.strftime("%d-%m-%Y") %></span></p>
               <p><span class="word_agenda_black"><%= simple_format h a.tasks %></span></p>
             </li>
           <%end%>

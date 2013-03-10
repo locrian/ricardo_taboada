@@ -1,10 +1,15 @@
 RicardoTaboada::Application.routes.draw do
     
+  get "documents/new"
+
+  get "attachments/new"
+
   get "users/new"
 
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
   resources :agendas
+  resources :documents
 
   match '/signup',  to: 'users#new'
   match '/signin',  to: 'sessions#new'
@@ -20,6 +25,8 @@ RicardoTaboada::Application.routes.draw do
   match '/about_ispgaya', to: 'static_pages#about_ispgaya'
 
   match '/roadmap', to: 'agendas#index'
+  match '/documents' , to: 'documents#index'
+
   root to: 'static_pages#home'
 
   # The priority is based upon order of creation:
