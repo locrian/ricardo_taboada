@@ -1,0 +1,43 @@
+<% provide(:title, 'Roadmap') %>
+
+  <h1>Roadmap</h1>
+
+  <div class="row" id="agenda-insert">
+    <div class="span5">
+
+      <%if current_user.email == "ricardo.taboada@hotmail.com" %>
+        <%= form_for(@agenda) do |f| %>
+            <%# Parcial de gerar erros localizado em app/views/shared/_error_messages_agenda.html.erb %>
+          <%= render 'shared/error_messages_agenda' %>
+
+          <%= f.label :start_date %>
+          <%= f.text_field :start_date %>
+
+          <%= f.label :end_date %>
+          <%= f.text_field :end_date %>
+
+          <%= f.label :tasks %>
+          <%= f.text_area :tasks, :cols => "10", :rows => "5" %>
+
+          <%= f.submit "Create", class: "btn btn-large btn-primary" %>
+        <%end%>
+      <%end%>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+      <div class="row-fluid">
+        <ul class="agendas">
+          <%@agendas.all.each do |a| %>
+            <li>
+              <p><span class="word_agenda_gray">From: </span>
+              <span class="word_agenda_black"><%= a.start_date %> </span> 
+              <span class="word_agenda_gray">to: </span>
+              <span class="word_agenda_black"> <%= a.end_date %></span></p>
+              <p><span class="word_agenda_black"><%= simple_format h a.tasks %></span></p>
+            </li>
+          <%end%>
+        </ul>
+      </div>
+  </div>
+

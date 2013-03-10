@@ -1,13 +1,26 @@
 RicardoTaboada::Application.routes.draw do
-  
+    
   get "users/new"
 
-  root to: 'static_pages#home'                   
+  resources :users
+  resources :sessions, only: [:new, :create, :destroy]
+  resources :agendas
+
+  match '/signup',  to: 'users#new'
+  match '/signin',  to: 'sessions#new'
+  match '/signout', to: 'sessions#destroy', via: :delete                   
 
   match '/about',   to: 'static_pages#about'
   match '/contacts', to: 'static_pages#contacts'
   match '/curriculum', to: 'static_pages#curriculum'  
   match '/projects', to: 'static_pages#projects'
+ 
+  match '/about_alert', to: 'static_pages#about_alert'
+  match '/about_internship', to: 'static_pages#about_internship'
+  match '/about_ispgaya', to: 'static_pages#about_ispgaya'
+
+  match '/roadmap', to: 'agendas#index'
+  root to: 'static_pages#home'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

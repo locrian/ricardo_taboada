@@ -19,6 +19,23 @@ $customTransparentBg: rgba(240,240,240,0.9); /*rgba accepts a transparent value*
   box-shadow: 0px 0px 5px #888;
 }
 
+/* forms */
+
+input, textarea, select, .uneditable-input {
+  border: 1px solid #bbb;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  @include box_sizing;
+}
+
+input {
+  height: auto !important;
+}
+
+
+
+
 /*General*/
 
 /*
@@ -39,13 +56,58 @@ width:1200px;     			    /* Specifies the overall width of the page
     }			
 }
 
+html,
 body{
   height: 100%;
-  margin-left:0px;
-  background: url('fundo3.jpg') repeat-x;   /* Background image for the whole website */
+  //margin-left:0px;
+  background: url('fundo_geral_alert.jpg') repeat-x;   /* Background image for the whole website */
   background-attachment:fixed;		    /* Fixs the backgroud */
-  /*background-color: $grayMediumLight;
+  /*background-color: $grayMediumLight; */
 }
+
+/* Wrapper for page content to push down footer */
+#wrap {
+        min-height: 100%;
+        height: auto !important;
+        height: 100%;
+        /* Negative indent footer by it's height */
+        margin: 0 auto -120px;
+      }
+
+/* Set the fixed height of the footer here */
+      #push,
+      #footer {
+        height: 120px;
+      }
+      #footer {
+        background-color: #f5f5f5;
+      }
+
+/* Lastly, apply responsive CSS fixes as necessary */
+      @media (max-width: 767px) {
+        #footer {
+          margin-left: -20px;
+          margin-right: -20px;
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+      }
+
+/* Custom page CSS
+      -------------------------------------------------- */
+      /* Not required for template or sticky footer method. */
+
+      #wrap > .container {
+        padding-top: 60px;
+      }
+      .container .credit {
+        margin: 20px 0;
+      }
+
+      code {
+        font-size: 80%;
+      }
+
 
 .teste{
 border-color:green;
@@ -93,23 +155,32 @@ margin-left:25px;
   }
 }
 
-.row {
-text-align: center;
+.row{
+  text-align: center;
+}
+
+#rowLogin {
+  margin-left: auto;
+  margin-right: auto;
+  width: 260px;
+  text-align: center;
 }
 
 
 #hu-home{
   text-align: top;
-  padding-top: 110px;
-  padding-bottom: 20px;                        
-  margin-bottom: 50px;
+  height: 460px;
+  padding-top: 90px;
+  padding-bottom: 00px;                        
+  margin-bottom: 0px;
   margin-top: 45px;
   margin-left:-25px;
   background-repeat: no-repeat;
-  background-image: url(hu1.png);
+  background-image: url(hospital.jpg);
   background-position:center top;
   #home-technologies{
-     margin-top: -70px; 
+     margin-top: -70px;
+     margin-bottom: 0px; 
   }
 
 }
@@ -126,7 +197,7 @@ text-align: center;
 .hero-unit {                            /* Common Hero Units */
   /*height:10;*/
   padding: 80px;			
-  margin-bottom: 50px;
+  margin-bottom: 0px;
   margin-top: 25px;
   background-color: $customTransparentBg;
   
@@ -162,16 +233,27 @@ background-repeat: no-repeat;
 
 
 .span6{
-width: 300px;
-text-align: center;
- #button_lm{                            /* Button's "Learn more" of the home page"*/
-   margin-top: 10px;
-   &:hover{
+  margin-top: 80px;
+  margin-bottom: 0px;
+  width: 300px;
+  text-align: center;
+  #button_lm{                            /* Button's "Learn more" of the home page"*/
+    margin-top: 10px;
+    &:hover{
         color: white;
         background: $customButtonBlue;
-   }
- }
+    }
+  }
 }
+
+#agenda-insert{
+  width: 410px;
+  margin-left:  auto;
+  margin-right: auto;
+  text-align: left
+}
+
+
 
 
 /* Curriculum & Projects*/
@@ -247,6 +329,21 @@ p {
   line-height: 1.7em;
 }
 
+
+.word_agenda_gray{
+  font-size: 1.5em;
+  letter-spacing: -1px;
+  margin-bottom: 40px;
+  color: $grayLight;
+}
+
+.word_agenda_black{
+  font-size: 1.5em;
+  letter-spacing: -1px;
+  margin-bottom: 40px;
+}
+ 
+
 /* header */
 
 #logo {				/* customization of the "Ricardo Taboada" logo on the navbar */
@@ -266,15 +363,8 @@ p {
 
 /*  footer */
 
-#nav-footer {
-margin-left: -25px;
-margin-bottom: 0px;
-
-text-align: center;
-}
-
 footer { 
-  margin-top: 150px;
+  margin-top: 50px;
   margin-bottom: 0px; 
    a {
    color: $gray; /* built in color gray */
@@ -288,6 +378,15 @@ footer {
   }
 }
 
+.agendas {
+  list-style: none;
+  margin: 0;
+  li {
+    overflow: auto;
+    padding: 10px 0;
+    border-bottom: 1px solid $grayLighter
+  }
+}
 
 
 /*Miscellaneous */

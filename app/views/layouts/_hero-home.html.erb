@@ -1,26 +1,20 @@
 <div class="row features" id="home-technologies">
-   <h3>Technology used to put this project up.</h3>
-    <div class="span6">
-      <%= link_to image_tag("ruby.png", alt: "Ruby"), 'http://ruby-lang.org/' %>
-         <h3>Ruby</h3>
-         <p style="color: white">Ruby is the main programming language behind the framework used to build this website.</p>
-         <%= link_to "Learn more", 'about', class: "btn disabled", id: "button_lm" %>
-     </div>
+   <br><br>
+   <%= link_to image_tag("alert2.png", alt: "Alert"), 'http://www.alert-online.com' %>
+   <br>
+      <div class="span6">
+        <%= link_to image_tag("alert_icon.png", alt: "About ALERT"), about_alert_path %>
+           <h3>About ALERT</h3>
+      </div>
+    
+      <div class="span6">
+        <%= link_to image_tag("techs.png", alt: "The Internship"), about_internship_path %>
+             <h3>The Internship</h3>
+      </div>
 
-    <div class="span6">
-      <%= link_to image_tag("rails.png", alt: "ISPGaya"), 'http://rubyonrails.org//' %>
-           <h3>Rails</h3>
-           <p style="color: white">Ruby on Rails or simply 'Rails' is a framework for database driven web development written in Ruby</p>
-           <%= link_to "Learn more", 'about', class: "btn disabled", id: "button_lm" %>
-    </div>
-
-    <div class="span6">
-       <%= link_to image_tag("htmlcss.png", alt: "ISPGaya"), 'http://www.ispgaya.pt/' %>
-           <h3>Other technologies</h3>
-           <p style="color: white">Among other technologies used to build and run this project are HTML5, CSS, Bootstrap, RSpec...</p>
-           <%= link_to "Learn more", 'about', class: "btn disabled", id: "button_lm" %>
-    </div>
+      <div class="span6">
+         <%= link_to image_tag("ispgaya.png", alt: "ISPGaya"), about_ispgaya_path %>
+             <h3>About ISPGaya</h3>
+      </div>
  </div>
 
-<br><br><br>
-<h1 style="color: white; font-size: 2.7em">Please note that this site is under construction</h1>
