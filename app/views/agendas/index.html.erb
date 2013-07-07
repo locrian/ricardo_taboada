@@ -27,17 +27,95 @@
 
   <div class="container-fluid">
       <div class="row-fluid">
-        <ul class="agendas">
-          <%@agendas.all.each do |a| %>
-            <li>
-              <p><span class="word_agenda_gray">From: </span>
-              <span class="word_agenda_black"><%= a.start_date.strftime("%d-%m-%Y") %> </span> 
-              <span class="word_agenda_gray">to: </span>
-              <span class="word_agenda_black"> <%= a.end_date.strftime("%d-%m-%Y") %></span></p>
-              <p><span class="word_agenda_black"><%= simple_format h a.tasks %></span></p>
-            </li>
-          <%end%>
-        </ul>
+        <div class="span2">
+           <p></p>
+            <div class="tabbable tabs-left teste">
+              <ul class="nav nav-tabs myTab">
+                <li class="active"><a href="#tab3" data-toggle="tab">Março</a></li>
+                <li><a href="#tab4" data-toggle="tab">Abril</a></li>
+                <li><a href="#tab5" data-toggle="tab">Maio</a></li>
+                <li><a href="#tab6" data-toggle="tab">Junho</a></li>
+                <li><a href="#tab7" data-toggle="tab">Julho</a></li>
+              </ul>
+            </div>
+        </div>
+
+        <div class="span10">
+     <p><br></p>
+
+          <div class="tab-content">
+            <div class="tab-pane active fade in" id="tab3">
+	      <%@agendas.all.each do |a| %>
+	        <% if a.start_date.month == 3 %>
+                  <li>
+                    <p><span class="word_agenda_gray">From: </span>
+                    <span class="word_agenda_black"><%= a.start_date.strftime("%d-%m-%Y") %> </span> 
+                    <span class="word_agenda_gray">to: </span>
+                    <span class="word_agenda_black"> <%= a.end_date.strftime("%d-%m-%Y") %></span></p>
+                    <p><span class="word_agenda_black"><%= simple_format h a.tasks %></span></p>
+                  </li>
+                <%end%>
+              <%end%>
+            </div>
+
+            <div class="tab-pane active fade in" id="tab4">
+              <%@agendas.all.each do |a| %>
+                <% if a.start_date.month == 4 %>
+                  <li>
+                    <p><span class="word_agenda_gray">From: </span>
+                    <span class="word_agenda_black"><%= a.start_date.strftime("%d-%m-%Y") %> </span>
+                    <span class="word_agenda_gray">to: </span>
+                    <span class="word_agenda_black"> <%= a.end_date.strftime("%d-%m-%Y") %></span></p>
+                    <p><span class="word_agenda_black"><%= simple_format h a.tasks %></span></p>
+                  </li>
+                <%end%>
+              <%end%>
+            </div>
+
+            <div class="tab-pane active fade in" id="tab5">
+              <%@agendas.all.each do |a| %>
+                <% if a.start_date.month == 5 %>
+                  <li>
+                    <p><span class="word_agenda_gray">From: </span>
+                    <span class="word_agenda_black"><%= a.start_date.strftime("%d-%m-%Y") %> </span>
+                    <span class="word_agenda_gray">to: </span>
+                    <span class="word_agenda_black"> <%= a.end_date.strftime("%d-%m-%Y") %></span></p>
+                    <p><span class="word_agenda_black"><%= simple_format h a.tasks %></span></p>
+                  </li>
+                <%end%>
+              <%end%>
+            </div>
+
+            <div class="tab-pane active fade in" id="tab6">
+              <%@agendas.all.each do |a| %>
+                <% if a.start_date.month == 6 %>
+                  <li>
+                    <p><span class="word_agenda_gray">From: </span>
+                    <span class="word_agenda_black"><%= a.start_date.strftime("%d-%m-%Y") %> </span>
+                    <span class="word_agenda_gray">to: </span>
+                    <span class="word_agenda_black"> <%= a.end_date.strftime("%d-%m-%Y") %></span></p>
+                    <p><span class="word_agenda_black"><%= simple_format h a.tasks %></span></p>
+                  </li>
+                <%end%>
+              <%end%>
+            </div>
+
+            <div class="tab-pane active fade in" id="tab7">
+              <%@agendas.all.each do |a| %>
+                <% if a.start_date.month == 7 %>
+                  <li>
+                    <p><span class="word_agenda_gray">From: </span>
+                    <span class="word_agenda_black"><%= a.start_date.strftime("%d-%m-%Y") %> </span>
+                    <span class="word_agenda_gray">to: </span>
+                    <span class="word_agenda_black"> <%= a.end_date.strftime("%d-%m-%Y") %></span></p>
+                    <p><span class="word_agenda_black"><%= simple_format h a.tasks %></span></p>
+                  </li>
+                <%end%>
+              <%end%>
+            </div>
+          </div>
+
+        </div>
       </div>
   </div>
 
